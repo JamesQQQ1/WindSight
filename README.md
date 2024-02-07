@@ -7,7 +7,15 @@ This repository contains the complete model developed as part of my Master's res
 
 ### File Descriptions
 
-- `Final.py`: The primary script for running the complete model. This file should be executed after all prerequisite data preparation steps have been completed.
+- `Prophet.py`: This script utilizes the Prophet forecasting model to generate predictions based on time series data.
+- `Raster_Layer.py`: This script handles the conversion of ArcGIS raster files to the NetCDF format, facilitating the integration of additional datasets into the model.
+- `extrapo_population.py`: This script extrapolates population data to estimate population distribution across geographical regions.
+- `final_2.6.py`: This script represents one of the final versions of the model, tailored for scenario 2.6.
+- `final_4.5.py`: This script represents one of the final versions of the model, tailored for scenario 4.5.
+- `final_8.5.py`: This script represents one of the final versions of the model, tailored for scenario 8.5.
+- `land_use_change.py`: This script analyzes changes in land use patterns over time, providing crucial input for the model's environmental impact assessments.
+- `land_use_slice.py`: This script slices and processes land use data to generate inputs for the model, ensuring accurate representation of land use factors in the analysis.
+- `last_year_avg.py`: This script calculates the average values of relevant variables from the last year of data, serving as a baseline for comparison in scenario analysis.
 
 ### Data Preparation
 
@@ -17,7 +25,7 @@ The model expects input files in NetCDF format. Ensure that all your data files 
 
 Apart from the main model script, this repository includes several Python scripts used for data preparation:
 
-- **Land Use and Land Area Files**: These scripts should be executed first to prepare the datasets required by the model. They process information related to land use and land area.
+- **Land Use Files**: These scripts should be executed first to prepare the datasets required by the model. They process information related to land use patterns and changes.
   
 - **Raster File Conversion**: This script converts ArcGIS files to the NetCDF format. It's essential for incorporating datasets not originally in NetCDF format.
   
@@ -28,7 +36,7 @@ Apart from the main model script, this repository includes several Python script
 To run the model for various scenarios, follow these steps:
 
 1. Ensure all your datasets are in the correct format (NetCDF) or have been converted using the provided scripts.
-2. Execute the land use and land area preparation scripts.
+2. Execute the land use preparation scripts.
 3. Run the raster file conversion script for any additional datasets.
 4. Execute the population files script to prepare population data.
 5. Run the `Final.py` script to perform the analysis for each scenario.
@@ -37,7 +45,7 @@ To run the model for various scenarios, follow these steps:
 
 #### Included Data Files
 
-This repository includes raw data files that were specifically used in my research. These files serve as examples or starting points for users who wish to understand the data format and structure required by the model.
+This repository includes raw data files that were specifically used in my research. These files serve as examples or starting points for users who wish to understand the data format and structure required by the model. They are only for the RCP 4.5 scinario.
 
 #### Model Flexibility
 
